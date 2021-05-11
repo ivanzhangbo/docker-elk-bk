@@ -1,15 +1,15 @@
 [
     {
         "Id": "Id93844851311792",
-        "Arn": "arn:aws:ssm:ap-northeast-1:192737007328:automation-definition/LifeCycleHookDoc:$DEFAULT",
-        "RoleArn": "arn:aws:iam::192737007328:role/Invoke-SSM-automation-from-CloudWatch-Event",
+        "Arn": "arn:aws:ssm:ap-northeast-1:055242756678:automation-definition/Add-AD-Document:$DEFAULT",
+        "RoleArn": "arn:aws:iam::055242756678:role/Invoke-SSM-AutoMation-CWE-ROLE",
         "InputTransformer": {
             "InputPathsMap": {
                 "asgname": "$.detail.AutoScalingGroupName",
                 "instanceid": "$.detail.EC2InstanceId",
                 "lchname": "$.detail.LifecycleHookName"
             },
-            "InputTemplate": "{\"InstanceId\":[<instanceid>],\"ASGName\":[<asgname>],\"LCHName\":[<lchname>],\"automationAssumeRole\":[\"arn:aws:iam::192737007328:role/SSM-automation-Role\"]}"
+            "InputTemplate": "{\"InstanceId\":[<instanceid>],\"ASGName\":[<asgname>],\"LCHName\":[<lchname>],\"automationAssumeRole\":[\"arn:aws:iam::055242756678:role/SSM-IAM-Role\"]}"
         }
     }
 ]
